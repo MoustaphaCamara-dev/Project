@@ -1,0 +1,20 @@
+PassGen
+
+Participant :
+
+
+Camara Moustapha
+
+
+Objectif:
+
+Créer un générateur de mot de passe et pouvoir les stocks et y avoir accès de manière sécuriser
+
+Technologie:
+
+Python
+
+Tâches:
+Créer un algorithme  pouvant générer un mot de passe aléatoire
+ajouter un système de longueur de mots de passe 
+ajouter un système  permettant de sélectionner l’utilisation de majuscule, minuscule, caractères spéciaux
