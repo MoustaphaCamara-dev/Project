@@ -23,7 +23,6 @@ color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    
     flex-direction: column;
     }
 
@@ -92,3 +91,38 @@ h1{  text-shadow: #fff 0.5px 0 5px;
 
 text-decoration:line-through;
 }
+
+#victoire{ 
+
+  padding-bottom: 2rem;
+  transition: 2s;
+  font-size: 2rem;
+  text-shadow: yellow 0.5px 0 5px;
+}
+
+#newGame{
+    box-shadow: 3px 1px (255, 255, 255,0.7);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    background: #ffff;
+    color:  blue;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin: 5px;
+transition: 0.2s;
+}
+
+#newGame:active{
+  transform: scale(0.5);
+
+color: red;}
+
+
+#newGame:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px  rgba(255, 255, 255,0.4); 
+        cursor: pointer;
+        
+    }

@@ -5,7 +5,9 @@ let joueur = document.getElementById("joueur");
 let score1 = document.getElementById("score1");
 let score2 = document.getElementById("score2");
 let scoreNuls = document.getElementById("scoreNuls");
-
+let vic= document.getElementById("victoire");
+let rej= document.getElementById("newGame");
+var fin = false;
 let state = {
 
 
@@ -38,9 +40,14 @@ const resetState = ( )=>{
  state.c8 = 0;
  state.c9 = 0;
  cases.forEach((c) => (c.textContent = ""));
+ vic.textContent = "";
  joueur.textContent= "1";
+ fin= false;
+
+
 
 }
+
 
 
 const verifierVictoire = () => {
@@ -89,29 +96,46 @@ const jouerCase = (e) => {
         let Victoire = verifierVictoire();
 
 
-        if (Victoire === true)
+        if (Victoire === true )
         {
-            alert("le gagnant et le joueur"+ state.joueurEnCours)
-            if(state.joueurEnCours==1)
+            vic.textContent= "Victoire du joueur:"+joueur.textContent;
+            
+            if(state.joueurEnCours==1 && fin===false)
+            
         
-                {state.scoreJ1++;
-               ;
+                {e.target.textContent= "X";
+                    state.scoreJ1++;
                 score1.textContent= state.scoreJ1;
                 }
-            if(state.joueurEnCours==2)
-                {state.scoreJ2++;
+            if(state.joueurEnCours==2 && fin===false)
+                {     e.target.textContent= "O";
+                    state.scoreJ2++;
                 score2.textContent= state.scoreJ2;
+                
                 }
-        resetState();
 
+ 
+                fin= true;
 
         
     }
-    else if(Victoire=== null){
+    else if(Victoire=== null && fin===false){
         state.matchNuls++;
         scoreNuls.textContent = state.matchNuls;
-        alert("Match Nul");
-        resetState();
+        vic.textContent= "Match Nul";
+
+
+        if(state.joueurEnCours==1)
+        e.target.textContent= "X";
+    
+           
+        if(state.joueurEnCours==2)
+            {     e.target.textContent= "O";
+         
+            }
+
+        
+        fin = true
 
     }
 
@@ -137,4 +161,9 @@ cases.forEach((el) => {
     
 
 
-})
+}
+)
+
+rej.addEventListener("click" , resetState)
+
+
