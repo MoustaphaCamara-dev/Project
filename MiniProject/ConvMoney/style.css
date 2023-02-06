@@ -1,0 +1,96 @@
+
+
+*, ::before , ::after{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3B1C32;
+    width: 100%;
+height: 100vh;
+}
+
+.carte{
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #831140;
+    color: #FFCF9C;
+    border-radius: 20px ;
+    box-shadow: 0px 0px 20px #831140;
+}
+
+#button{
+    
+    padding: 20px 40px;
+    margin: 20px;
+    border: 2px solid #BF7A51;
+   border-radius:10px ; 
+   box-shadow: 0px 0px 10px #BF7A51 ;
+   transition: 0.2s;
+}
+#button:hover{
+  
+
+ cursor: pointer;
+
+   background-color:#FFCF9C ;
+   color:#831140 ;
+   border-color: #FFCF9C;
+}
+ 
+
+
+
+.carte h1{
+    font-size: 50px;
+    margin-top: 20px;
+    text-shadow: 0px 0px 10px #BF7A51 ;
+    
+}
+
+ion-icon{
+margin-top: 10px;
+    font-size: 50px;
+   
+
+    
+}
+
+input{
+    color: #FFCF9C;
+font-size: 25px;
+    background-color: #3B1C32;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px #BF7A51 ;
+    border: 2px solid  #BF7A51;
+    margin-top: 10px;
+    
+}
+
+select{
+    box-shadow: 0px 0px 10px #BF7A51 ;
+    color: #FFCF9C;
+font-size: 25px;
+    background-color: #3B1C32;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid  #BF7A51;
+    margin-top: 10px;
+}
+
+select:hover{cursor: pointer;}
