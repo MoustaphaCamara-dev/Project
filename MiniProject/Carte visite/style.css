@@ -1,0 +1,124 @@
+*,
+::after,
+::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: "Hind Guntur", sans-serif;
+
+  flex-direction: column;
+  background-image: linear-gradient(
+      45deg,
+      rgba(11, 71, 134, 0.53) 0%,
+      rgba(11, 71, 134, 0.53) 14.286%,
+      rgba(1, 46, 118, 0.53) 14.286%,
+      rgba(1, 46, 118, 0.53) 28.572%,
+      rgba(32, 120, 166, 0.53) 28.572%,
+      rgba(32, 120, 166, 0.53) 42.858%,
+      rgba(52, 169, 197, 0.53) 42.858%,
+      rgba(52, 169, 197, 0.53) 57.144%,
+      rgba(62, 193, 213, 0.53) 57.144%,
+      rgba(62, 193, 213, 0.53) 71.43%,
+      rgba(42, 144, 181, 0.53) 71.43%,
+      rgba(42, 144, 181, 0.53) 85.716%,
+      rgba(21, 95, 150, 0.53) 85.716%,
+      rgba(21, 95, 150, 0.53) 100.002%
+    ),
+    linear-gradient(137deg, rgb(244, 2, 251), rgb(103, 32, 250));
+}
+#carte {
+  width: 325px;
+  height: 300px;
+  display: flex;
+  border-radius: 25px;
+  padding: 25px;
+}
+
+#carte.active {
+  width: 600px;
+  height: 300px;
+  animation: crt 1s ease forwards;
+}
+
+img#avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+
+  margin-left: 10px;
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 0.5);
+}
+
+img:hover {
+  animation: focus 1s;
+}
+
+#description {
+  word-wrap: break-word;
+  display: none;
+  color: #f4f4f4;
+  padding: 0px;
+  margin: 0px;
+  font-size: 11.5px;
+}
+
+#description.active {
+  word-wrap: break-word;
+  display: block;
+  margin-left: 10px;
+  animation: txt 1s ease forwards;
+}
+
+@keyframes txt {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes crt {
+  from {
+    width: 325px;
+    height: 300px;
+  }
+
+  to {
+    width: 600px;
+    height: 300px;
+    border: 2px solid #f4f4f4;
+    text-shadow: #ffff 1px 0 10px;
+    box-shadow: 0px 0px 15px rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+  }
+}
+
+#button {
+  padding: 10px 60px;
+  border: 1px solid rgb(255, 255, 255);
+  margin: 20px;
+  backdrop-filter: blur(10px);
+  transition: 1s ease;
+  color: #f4f4f4;
+  border-radius: 10px;
+}
+
+#button:hover {
+  cursor: pointer;
+  color: rgb(8, 44, 83);
+  background-color: rgb(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 15px rgb(255, 255, 255, 0.5);
+}
+#button:active {
+  transform: scale(0.8);
+}
